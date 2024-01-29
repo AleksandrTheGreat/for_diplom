@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Полиграфия "МАЯК"</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.1-dist/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+<!-- шапка -->
+    <header class='header'>
+
+        <div class="container-fluid">
+            <div class="row">
+
+<!-- логотип -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 headlogo">
+                    <div><img src="{% static 'img/logo.png' %}"></div>
+                </div>
+
+                <div class="col-xs-0 col-sm-0 col-md-0 col-lg-4 col-xl-6 headspace"></div>
+
+<!-- телефон / почта -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 headcontact">
+                    <div><a href="tel:+73462350368">8(3462)350368</a></div>
+                    <div><a href="mailto:mayk369@mail.ru">mayk369@mail.ru</a></div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+<!-- конец шапки -->
+
+<!-- страница -->
+    <main class='main'>
+
+<!-- блок "О нас" -->
+        <div class="about">
+
+<!-- заголовок "О нас" -->
+            <div class="titleabouttext">
+                <h2>О нас</h2>
+            </div>
+
+<!-- текст "О нас" -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="textabouttext">
+                            Мы - это команда специалистов, объединенных общей целью -
+                            предоставлять качественные полиграфические услуги и услуги срочного фото.
+                            Наш опыт и профессионализм позволяют нам успешно работать на рынке уже много лет, начиная с 2003 года. <br><br>
+                            Чем мы отличаемся: <br><br>
+
+                            <b>Низкие Цены:</b> <br>
+                            Мы предлагаем конкурентоспособные цены, делая наши услуги доступными для всех.
+                            Мы понимаем, что экономия важна. <br><br>
+
+                            <b>Большой Ассортимент:</b> <br>
+                            Наш каталог продукции и услуг обширен. Независимо от того, нужна ли вам печать чертежей,
+                            переплет дипломных работ или срочное фото, у нас вы найдете то, что вам нужно. <br><br>
+
+                            <b>Индивидуальный Подход:</b> <br>
+                            Мы понимаем, что каждая работа уникальна. Мы обеспечиваем индивидуальный подход к каждому заказу,
+                            чтобы удовлетворить ваши требования. <br><br>
+
+                            С нами вы получаете надежного партнера в сфере полиграфии и фотоуслуг.
+                            Наша компания гордится своей репутацией и стремится удовлетворить потребности наших клиентов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!-- конец блока "О нас" -->
+
+<!-- блок "Прайс" -->
+        <div class="price" >
+
+            <div class="titlepricetext">
+                <h2>Услуги</h2>
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    {% for i in prices %}
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 colprice">
+                        <div class="boxprice">
+                            <div class="priceimg">
+                                <img src="{% static i.image %}" width="100%">
+                            </div>
+                            <div class="priceinfo">
+                                <div>{{ i.title }}</div>
+                                <div>{{ i.cena }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+<!-- конец блока "Прайс" -->
+
+<!-- блок "Контакты" -->
+        <div class="contacts">
+
+<!-- заголовок "О нас" -->
+            <div class="titlecontactstext">
+                <h2>Контакты</h2>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+
+<!-- контактная информация -->
+                    <div class="col-lg-4 col-md-12 col-sm-12 contactsall">
+                        <div class="contactsalltext">
+                            <div>Полиграфия "МАЯК"</div>
+                            <div>Адрес: г.Сургут, пр.Ленина, д.49/1, второй этаж</div>
+                            <div class="ssilka">Эл.почта: <a href="mailto:mayk369@mail.ru">mayk369@mail.ru</a></div>
+                            <div class="ssilka">Телефон: <a href="tel:+73462350368">8(3462)350368</a>, <a href="tel:+79128110414">8(912)8110414</a></div>
+                            <div class="socialicons">
+                                <a href="whatsapp://send?phone=+79128110414"><img src="{% static 'img/social/whatsapp.png' %}" width="10%"></a>
+                                <a href="viber://chat?number=79128110414"><img src="{% static 'img/social/viber.png' %}" width="10%"></a>
+                                <a href="https://vk.com/club195488141"><img src="{% static 'img/social/vk.png' %}" width="10%"></a>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- карта местонахождения -->
+                    <div class="col-lg-4 col-md-12 col-sm-12 contactsmap">
+                        <div class="contactsmaphere">
+                            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/973/surgut/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Сургут</a><a href="https://yandex.ru/maps/973/surgut/?from=mapframe&ll=73.377749%2C61.258334&source=mapframe&utm_medium=mapframe&utm_source=maps&z=18" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=73.377749%2C61.258334&source=mapframe&utm_source=mapframe&z=18" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        </div>
+                    </div>
+
+<!-- форма обратной связи -->
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 contactsforma">
+                        <div class="contactsmaphere">
+<!--                            <form action="" method="post">-->
+<!--                                {% csrf_token %}-->
+<!--                                {% for i in forma %}-->
+<!--                                    <div>{{ i.**** }}</div>-->
+<!--                                    <div>{{ i.**** }}</div>-->
+<!--                                    <div>{{ i.**** }}</div>-->
+<!--                                {% endfor %}-->
+<!--                            </form>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+<!-- конец блока "Контакты" -->
+
+    </main>
+<!-- конец страницы -->
+
+<!-- подвал -->
+    <footer class='footer'>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 footertext">
+                    by Aleksandr_theGreat
+                </div>
+            </div>
+        </div>
+
+    </footer>
+<!-- конец подвала -->
+<script src="{% static 'bootstrap-5.0.1-dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

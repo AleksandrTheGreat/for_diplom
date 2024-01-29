@@ -1,0 +1,164 @@
+* {
+    font-family: Bahnschrift;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.header {
+    background-color: rgb(136, 197, 204);
+    font-size: x-large;
+    padding-left: 0;
+    /* padding-right: 0; */
+}
+
+.about, .contacts, .price {
+    background-color: white;
+    margin: 0%;
+}
+
+/* Шапка */
+
+.headlogo {
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    justify-content: center;
+    background-color: white;
+}
+
+.headlogo img {
+    height: 100px;
+}
+
+.headspace {
+    width: min-content;
+}
+
+.headcontact {
+    align-items: center;
+    height: 100px;
+}
+
+.headcontact>div {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headcontact a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Тело */
+
+/* .main {
+    margin: 0%;
+} */
+
+/* О нас */
+
+/* общий контейнер "О нас" */
+
+
+/* Загловок "О нас" */
+
+/* .titleabout, .titlecontacts {
+    background-color: white;
+} */
+
+.titleabouttext, .titlecontactstext, .titlepricetext {
+    background-color: rgb(255,212,100);
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+}
+
+/* Текст "О нас" */
+
+.contactsalltext, .contactsmaphere {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.textabouttext {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Прайс */
+
+.price {
+    padding-bottom: 20px;
+}
+
+.boxprice {
+    background-color: rgb(255,212,100);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.boxprice:hover {
+    background-color: rgb(136, 197, 204);
+}
+
+.priceimg {
+    width: 50px;
+    margin: 10%;
+}
+
+.priceinfo {
+    text-align: left;
+    margin: 10%;
+    margin-left: 0%;
+}
+
+/* Контакты */
+
+.contactsalltext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socialicons {
+    margin-top: 10px;
+}
+
+.socialicons>a {
+    margin-right: 10px;
+}
+
+/* Подвал */
+
+.footer {
+    background-color:rgb(14, 86, 122);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.ssilka>a {
+    text-decoration: none;
+}
